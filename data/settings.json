@@ -1,0 +1,9 @@
+{
+    "theme_color": "#0969da",
+    "site_title": "英语文章背诵助手",
+    "welcome_modal": {
+        "enabled": true,
+        "title": "📚 欢迎使用背诵助手",
+        "content": "请一定不要攻击这里！\nPlease do not attack here!"
+    }
+}
