@@ -1,0 +1,2 @@
+# EnReciteTool
+一个基于php的网页背书平台，利用DeepSeek模型进行辅助开发
