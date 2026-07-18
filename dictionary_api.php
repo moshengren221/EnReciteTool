@@ -35,9 +35,9 @@ function sendJson($code, $message, $data = null) {
 // ============================================================
 class DictionaryDB {
     private $host = 'localhost';
-    private $dbname = 'sfydb_6309084';
-    private $username = 'sfydb_6309084';
-    private $password = 'Lyc0927.';  // 请修改
+    private $dbname = '你的数据库名';
+    private $username = '你的数据库账号';
+    private $password = '你的密码';
     private $conn = null;
     private $lastError = '';
 
