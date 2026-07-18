@@ -1,0 +1,2198 @@
+# ========== 基础通用英文词汇（中小学/日常）
+a
+abandon
+ability
+able
+about
+above
+absent
+absolute
+absorb
+abstract
+abundant
+abuse
+academic
+accept
+access
+accident
+accompany
+accomplish
+according
+account
+accurate
+achieve
+acquire
+across
+action
+active
+activity
+actual
+adapt
+add
+address
+adequate
+adjust
+admit
+adopt
+adult
+advance
+advantage
+advice
+affect
+afford
+afraid
+after
+again
+age
+agency
+agent
+ago
+agree
+air
+alarm
+album
+alcohol
+alien
+alive
+all
+allow
+almost
+alone
+along
+already
+also
+alter
+amazing
+amount
+analyse
+ancient
+anger
+animal
+answer
+anxiety
+any
+appear
+apple
+apply
+area
+argue
+arrange
+arrive
+art
+article
+as
+ask
+assist
+assume
+attack
+attempt
+attend
+attention
+attitude
+attract
+audience
+august
+aunt
+author
+auto
+avoid
+awake
+baby
+back
+bad
+balance
+ball
+ban
+bank
+bar
+base
+basket
+bath
+battle
+be
+bear
+beautiful
+because
+bed
+before
+begin
+behave
+behind
+believe
+bell
+below
+beside
+best
+better
+between
+big
+bike
+bird
+birth
+bit
+blame
+blood
+blow
+blue
+board
+body
+boil
+book
+border
+borrow
+boss
+both
+bottle
+bottom
+boundary
+break
+breath
+breathe
+brick
+bridge
+bright
+bring
+brother
+brown
+brush
+build
+burn
+buy
+cake
+call
+camp
+can
+cap
+capital
+car
+card
+care
+carry
+case
+cat
+catch
+cause
+cave
+ceiling
+celebrate
+cell
+center
+certain
+chair
+change
+cheap
+check
+cheer
+cheese
+chemical
+chest
+chicken
+child
+china
+chip
+chocolate
+choice
+choose
+church
+circle
+city
+class
+clean
+clear
+climb
+clock
+close
+cloth
+cloud
+coal
+coast
+coat
+coffee
+coin
+cold
+collect
+college
+colour
+come
+comfort
+common
+communicate
+community
+company
+compare
+compete
+complete
+computer
+concern
+condition
+connect
+consider
+consist
+constant
+construct
+contact
+contain
+content
+continue
+control
+convenient
+cook
+cool
+copy
+corner
+correct
+cost
+cotton
+cough
+could
+count
+country
+cover
+cow
+crazy
+create
+cross
+cry
+culture
+cup
+current
+curve
+custom
+cut
+cycle
+dad
+daily
+dance
+danger
+dark
+date
+daughter
+day
+dead
+decide
+deep
+defeat
+defend
+define
+degree
+delay
+delicious
+deliver
+demand
+depend
+describe
+desert
+design
+desire
+destroy
+detail
+develop
+devote
+diary
+die
+difference
+difficult
+dig
+dinner
+direct
+dirty
+discover
+discuss
+disease
+dish
+distance
+district
+divide
+do
+doctor
+dog
+doll
+dollar
+door
+double
+down
+draw
+dream
+dress
+drink
+drive
+drop
+dry
+duck
+duty
+each
+early
+east
+easy
+eat
+education
+effect
+effort
+eight
+either
+electric
+elephant
+else
+empty
+end
+engine
+english
+enjoy
+enough
+enter
+environment
+equal
+escape
+especially
+establish
+estimate
+europe
+even
+ever
+every
+evidence
+exact
+example
+excellent
+except
+excite
+execute
+exercise
+expensive
+explain
+explode
+eye
+face
+fact
+factory
+fail
+fair
+fall
+family
+far
+farm
+fast
+fat
+father
+fear
+feed
+feel
+few
+field
+fight
+fill
+film
+final
+find
+fire
+first
+fish
+fit
+five
+fix
+flight
+floor
+flower
+fly
+food
+foot
+for
+force
+forever
+forget
+fork
+form
+forward
+free
+friend
+from
+front
+full
+fun
+funny
+future
+gain
+game
+garage
+garden
+gas
+general
+gentle
+get
+gift
+girl
+give
+glass
+go
+goal
+god
+gold
+good
+government
+grade
+grain
+grand
+grass
+great
+green
+ground
+group
+grow
+guard
+guess
+guide
+gun
+habit
+hair
+half
+hall
+hand
+hang
+happen
+happy
+hard
+harm
+harvest
+hat
+hate
+have
+he
+head
+health
+hear
+heart
+heat
+heavy
+height
+hello
+help
+hen
+here
+hide
+high
+hill
+him
+his
+history
+hit
+hold
+holiday
+home
+honest
+hope
+horse
+hospital
+hour
+house
+how
+however
+huge
+human
+hundred
+hungry
+hunt
+hurry
+husband
+ice
+idea
+if
+ignore
+ill
+image
+imagine
+immediate
+import
+important
+improve
+in
+include
+income
+increase
+indeed
+india
+industry
+infect
+inform
+inside
+instead
+institute
+instruct
+instrument
+insurance
+integrate
+intend
+interest
+international
+internet
+interview
+into
+introduce
+invent
+invite
+iron
+is
+island
+issue
+it
+job
+join
+journey
+joy
+judge
+juice
+jump
+jungle
+just
+keep
+key
+kill
+kind
+king
+kitchen
+kite
+knee
+knife
+knock
+know
+labour
+lack
+lady
+lake
+lamp
+land
+language
+large
+last
+late
+laugh
+law
+lay
+lazy
+lead
+learn
+leave
+left
+leg
+lend
+lesson
+let
+letter
+level
+library
+lie
+life
+lift
+light
+like
+line
+list
+listen
+little
+live
+load
+local
+lock
+lonely
+long
+look
+lose
+loss
+lot
+love
+low
+luck
+lunch
+machine
+magazine
+magic
+mail
+main
+make
+man
+manage
+many
+map
+march
+mark
+market
+match
+math
+matter
+may
+maybe
+me
+mean
+meet
+member
+memory
+mention
+menu
+merchant
+message
+metal
+method
+middle
+milk
+mind
+mine
+minute
+mirror
+miss
+mix
+model
+modern
+moment
+money
+monkey
+month
+moon
+moral
+more
+morning
+mother
+motor
+mountain
+mouse
+mouth
+move
+movie
+much
+museum
+music
+must
+my
+name
+nation
+natural
+near
+necessary
+neck
+need
+negative
+neighbour
+neither
+nerve
+net
+never
+new
+news
+next
+night
+nine
+no
+nobody
+nod
+noise
+none
+nor
+north
+nose
+not
+note
+now
+number
+object
+obey
+observe
+obtain
+occasion
+ocean
+offer
+office
+often
+oil
+old
+once
+one
+only
+open
+operate
+opinion
+opposite
+or
+order
+organ
+origin
+other
+our
+out
+over
+own
+pack
+page
+pain
+paint
+pair
+palace
+pan
+paper
+parent
+park
+part
+party
+pass
+past
+patient
+pay
+peace
+pen
+people
+pepper
+percent
+perfect
+person
+pet
+phone
+photo
+physical
+pick
+picnic
+picture
+piece
+pig
+pill
+pilot
+pink
+pipe
+pity
+place
+plan
+plant
+plate
+play
+please
+pleasure
+plenty
+point
+police
+pond
+pool
+poor
+popular
+population
+port
+position
+possible
+post
+potato
+pound
+power
+practice
+praise
+predict
+prefer
+prepare
+present
+president
+press
+pretend
+prevent
+price
+pride
+primary
+print
+private
+prize
+problem
+produce
+program
+project
+promise
+protect
+proud
+prove
+provide
+public
+pull
+punish
+pupil
+pure
+push
+put
+quality
+question
+quick
+quiet
+rabbit
+radio
+rain
+raise
+range
+rate
+raw
+reach
+read
+real
+reason
+receive
+recognise
+record
+red
+refuse
+regard
+region
+regular
+relate
+relax
+rely
+remain
+remember
+remove
+rent
+repair
+repeat
+replace
+reply
+report
+request
+require
+research
+respect
+rest
+result
+return
+review
+reward
+rice
+rich
+ride
+right
+ring
+river
+road
+robot
+rock
+room
+root
+rope
+rose
+rough
+round
+rule
+run
+safe
+salt
+same
+sand
+satisfy
+save
+say
+school
+science
+score
+sea
+search
+season
+second
+secret
+see
+seed
+seek
+seem
+select
+sell
+send
+sense
+separate
+serious
+serve
+set
+seven
+several
+share
+sharp
+she
+sheet
+shelf
+shell
+shift
+shine
+ship
+shirt
+shock
+shoe
+shoot
+shop
+short
+should
+show
+shut
+side
+sign
+silent
+silk
+silly
+silver
+simple
+since
+sing
+single
+sink
+sir
+sister
+sit
+site
+situation
+size
+skill
+skin
+sky
+sleep
+slow
+small
+smell
+smile
+smoke
+snow
+so
+soap
+social
+soft
+soil
+soldier
+solid
+solve
+some
+son
+song
+soon
+sort
+sound
+south
+space
+speak
+special
+speed
+spell
+spend
+spite
+split
+spoon
+sport
+spread
+spring
+square
+stage
+stair
+stand
+star
+start
+state
+stay
+steam
+step
+stick
+still
+stock
+stone
+stop
+store
+storm
+story
+straight
+strange
+street
+strength
+stretch
+strike
+strong
+student
+study
+subject
+succeed
+such
+sugar
+suggest
+suit
+summer
+sun
+supply
+support
+suppose
+sure
+surface
+surprise
+swim
+table
+tail
+take
+talk
+taxi
+tea
+teach
+team
+technology
+telephone
+television
+tell
+temperature
+ten
+term
+test
+text
+than
+that
+the
+their
+them
+then
+there
+therefore
+they
+thing
+think
+third
+this
+those
+though
+three
+through
+throw
+ticket
+time
+tiny
+tip
+tire
+title
+today
+together
+too
+tool
+top
+touch
+toward
+town
+train
+tree
+trouble
+true
+trust
+try
+turn
+two
+type
+uncle
+under
+unit
+unite
+university
+until
+up
+use
+usual
+value
+vegetable
+version
+very
+visit
+voice
+wait
+walk
+wall
+want
+warm
+wash
+waste
+watch
+water
+wave
+way
+we
+weak
+wealth
+wear
+weather
+week
+weight
+well
+west
+what
+when
+where
+whether
+which
+while
+white
+who
+why
+wide
+wife
+wild
+will
+win
+wind
+window
+wine
+winter
+wire
+wise
+with
+within
+without
+woman
+wood
+word
+work
+world
+worry
+worth
+would
+write
+year
+yellow
+yes
+yesterday
+yet
+you
+young
+your
+
+# ========== 四六级/考研/雅思托福高阶词汇
+abnormal
+abolish
+abrupt
+absurd
+abundant
+accelerate
+accentuate
+accessory
+accommodate
+accompany
+accordance
+accumulate
+accurate
+acute
+adaptation
+adequate
+adjacent
+adjustment
+administrate
+adolescent
+adverse
+affiliate
+aggravate
+alleviate
+ambiguous
+ambition
+analyze
+anniversary
+anonymous
+apparent
+appropriate
+approximate
+arbitrary
+artificial
+assess
+assumption
+authentic
+autonomy
+barrier
+beneficial
+bias
+bureaucratic
+calculate
+capability
+cautious
+circulate
+circumstance
+clarify
+collaborate
+compulsory
+consequence
+conservative
+considerable
+constitute
+consult
+contemporary
+contradict
+convenience
+corporate
+correspond
+criterion
+crucial
+cumulative
+demonstrate
+depict
+desperate
+deteriorate
+differentiate
+dilemma
+diminish
+disguise
+distinguish
+domestic
+dominate
+efficient
+eliminate
+emerge
+emphasize
+enhance
+enormous
+evident
+exaggerate
+exert
+facilitate
+feasible
+fluctuate
+formulate
+fundamental
+generate
+genuine
+guarantee
+hamper
+hesitate
+highlight
+hypothesis
+identical
+illustrate
+immense
+implication
+incline
+incredible
+indispensable
+inherent
+innovate
+inspect
+integral
+intense
+intermediate
+interrupt
+invalid
+isolate
+jeopardize
+legislate
+liable
+liberal
+limitation
+logical
+manifest
+manipulate
+marginal
+mediate
+minority
+modify
+mutual
+neutral
+nominate
+notable
+numerous
+obscure
+optimistic
+organism
+orient
+overwhelm
+parallel
+perspective
+phenomenon
+plausible
+predominant
+prevalent
+primitive
+priority
+proceed
+profound
+prohibit
+prosperous
+qualify
+radical
+random
+recession
+reinforce
+relevant
+resemble
+restrict
+resume
+revenue
+rigorous
+scarce
+significant
+simultaneous
+sophisticated
+spontaneous
+stagnant
+statistic
+substitute
+sufficient
+superficial
+sustain
+temporary
+tentative
+threshold
+tolerate
+transparent
+tremendous
+ultimate
+undergo
+undermine
+valid
+versatile
+violate
+virtual
+witness
+
+# ========== IT计算机/互联网编程专业词
+algorithm
+api
+application
+archive
+array
+backend
+backup
+bandwidth
+binary
+blockchain
+browser
+bug
+buffer
+cache
+client
+cloud
+code
+compile
+component
+console
+cookie
+cpu
+css
+database
+debug
+deploy
+desktop
+devops
+domain
+download
+endpoint
+framework
+frontend
+ftp
+function
+git
+gpu
+html
+http
+https
+ide
+interface
+ip
+java
+javascript
+json
+kernel
+linux
+log
+macos
+mainframe
+memory
+middleware
+module
+mysql
+network
+node
+open-source
+packet
+parameter
+php
+port
+python
+query
+ram
+react
+redis
+request
+response
+router
+script
+server
+sql
+stack
+storage
+tcp
+thread
+ui
+upload
+url
+usb
+user
+virtual machine
+vue
+web
+websocket
+wifi
+windows
+xml
+yaml
+backend developer
+frontend developer
+full stack
+database index
+encryption
+decrypt
+firewall
+hacker
+malware
+virus
+docker
+kubernetes
+nginx
+compiler
+variable
+loop
+array list
+object class
+api interface
+pixel
+resolution
+serverless
+cdn
+traffic
+bandwidth limit
+data mining
+big data
+artificial intelligence
+machine learning
+deep learning
+neural network
+chatbot
+llm
+large language model
+prompt
+token
+fine-tune
+dataset
+training set
+validation
+algorithm model
+binary code
+hexadecimal
+integer
+float
+boolean
+regex
+regular expression
+auth
+authorization
+authentication
+session
+jwt
+ssl certificate
+domain name system
+dns
+ipv4
+ipv6
+git commit
+git push
+repository
+branch merge
+dependency library
+package manager
+npm
+pip
+composer
+api request rate limit
+crud operation
+database table
+primary key
+foreign key
+sql injection
+xss attack
+csrf
+cyber security
+zero trust
+data encryption
+hash md5 sha256
+cloud server
+vps
+container
+virtualization
+monitor log alert
+automation script
+bot crawler
+spider
+anti-crawl rule
+user agent
+browser header
+proxy ip
+reverse proxy
+load balance
+microservice
+monolithic architecture
+distributed system
+cache hit rate
+disk io
+memory leak
+dead loop
+runtime error
+compile error
+debug log
+unit test
+integration test
+ci cd pipeline
+source code
+open source license
+github gitee
+website domain
+subdomain
+static resource
+cdn acceleration
+responsive design
+mobile adaptive
+web view
+mini program
+app apk ipa
+software version upgrade
+patch update
+firmware
+hardware driver
+gpu rendering
+render engine
+threejs webgl
+canvas svg animation
+websocket realtime
+message queue
+redis mq kafka
+database transaction
+rollback commit
+data backup restore
+partition table
+full text search
+elasticsearch lucene
+keyword indexing
+search ranking
+weight algorithm
+word segmentation
+nlp natural language processing
+sentiment analysis
+text classification
+translation model
+ocr optical character recognition
+speech recognition
+voice synthesis
+audio stream
+video codec h264 h265
+live stream push pull stream
+media server
+file upload chunk split
+multipart form data
+json parse serialize
+deserialize object
+restful api graphql grpc
+rpc remote procedure call
+webservice soap
+third party interface payment gateway
+alipay wechat pay stripe paypal
+order database transaction
+inventory lock
+distributed lock redis zookeeper
+id generator snowflake
+timestamp unix time
+time zone utc gmt
+date format parse
+schedule cron task
+timer delay queue
+multithread async await promise
+callback hell event loop
+thread pool coroutine goroutine
+memory stack heap garbage collection gc
+memory reference leak null pointer exception
+array out of bounds index overflow
+integer overflow division zero error
+exception capture try catch throw
+custom error code return message
+request timeout retry backoff circuit breaker
+rate limiter token bucket leaky bucket
+distributed idempotent prevent repeat submit
+cache penetration breakdown avalanche
+database read write separation master slave replication
+shard split sub database sub table
+data consistency cap base theory
+eventual consistency strong consistency
+message reliability at least once exactly once
+dead letter queue retry queue
+service register discovery nacos eureka consul
+gateway routing filter interceptor
+global exception handler unified response result
+dto vo po entity model mapper
+orm mybatis hibernate sqlalchemy
+database migration flyway liquibase
+unit test mock stub coverage rate
+performance benchmark pressure test jmeter locust
+load test peak qps tps latency p95 p99
+server monitoring prometheus grafana alertmanager
+log collection elk logstash elasticsearch kibana
+distributed tracing skywalking jaeger zipkin
+container orchestration k8s pod deployment service ingress
+docker image dockerfile volume network compose
+ci jenkins gitlab github actions docker registry mirror
+object storage oss cos s3 minio
+file pre-signed url access control acl policy
+cdn cache refresh purge hotlink protection
+domain ssl free certificate let encrypt
+dns resolution weight polling round robin ip blacklist
+waf web application firewall sql xss interception
+captcha slider verify picture code sms verify code
+two factor authentication 2fa totp
+password encryption salt hash bcrypt argon2
+user permission rbac role menu button data permission
+data desensitization mask phone id card address
+interface encrypt sign md5 rsa aes
+api whitelist ip blacklist access frequency limit
+anti brute force login error lock account
+session timeout kick offline single sign on sso oauth2
+website seo search engine optimization sitemap robots.txt
+spider crawl frequency keyword density backlink domain weight
+website access statistics uv pv ip visitor source page stay time
+heat map user behavior analysis funnel conversion rate
+ab test gray release traffic split rule weight control
+feature switch dynamic configuration remote config center
+multilingual internationalization i18n l10n translation dictionary
+front end framework react vue angular svelte solid
+component library element plus ant design vant arco design
+state management redux pinia vuex mobx zustand
+css preprocessor scss less stylus tailwind css
+build tool vite webpack rollup parcel esbuild
+typescript type interface generic enum union type
+browser compatibility polyfill babel postcss autoprefixer
+mobile h5 touch event responsive media viewport rem vw
+mini program wechat alipay uni app taro uniapp
+cross platform flutter react native electron tauri desktop app
+game engine unity unreal cocos godot web game canvas
+3d model gltf obj texture shader render pipeline
+vr ar xr metaverse virtual digital human avatar
+ai drawing stable diffusion midjourney dall e prompt art
+video edit ffmpeg opencv image processing pil cv2
+audio processing librosa sound wave spectrum noise reduction
+large model local deployment llama qwen mistral transformers accelerate
+vector database milvus chroma pgvector embedding retrieval rag
+retrieval augmented generation knowledge base document split chunk
+prompt engineering system prompt few shot zero shot cot reasoning agent tool call
+ai fine tuning lora qlora parameter efficient training peft
+dataset cleaning deduplicate filter annotation labeling tool
+model quantization int4 int8 gpu cpu inference speed optimization
+
+# ========== 金融商务经济词汇
+asset
+balance sheet
+bankruptcy
+bond
+budget
+capital
+cash flow
+commodity
+credit
+currency
+debt
+deposit
+dividend
+economy
+equity
+exchange rate
+finance
+fund
+hedge
+inflation
+interest
+investment
+liability
+loan
+margin
+market
+mortgage
+profit
+revenue
+risk
+securities
+stock
+tax
+trading
+wage
+wealth
+yield
+ipo
+futures
+option
+cryptocurrency
+bitcoin
+ethereum
+stablecoin
+forex
+leverage
+liquidity
+portfolio
+inflation rate
+monetary policy
+fiscal policy
+central bank
+reserve ratio
+consumer price index
+gdp gnp
+supply demand
+monopoly oligopoly
+competition market
+supply chain logistics
+invoice receipt vat tax
+audit accountant balance
+cost control budget cut
+venture capital angel investor
+startup unicorn valuation
+merger acquisition m&a
+stake shareholder board director
+dividend payout stock split
+bull bear market rally crash
+volume turnover index dow nasdaq sse
+limit order market order stop loss take profit
+position long short cover liquidate
+margin call forced liquidation
+derivatives swap forward contract
+commodity gold oil metal grain
+real estate housing mortgage rent
+insurance premium claim indemnity
+asset allocation risk diversification
+hedge fund private equity fund
+currency exchange foreign reserve
+devaluation appreciation currency peg
+deficit surplus trade balance
+inflation deflation stagflation recession depression
+quantitative easing qe interest rate hike cut
+consumer credit loan credit card installment
+microfinance small loan peer lending p2p
+digital payment wallet transfer remittance
+cross border settlement swift wire transfer
+financial compliance aml anti money laundering kyc know your customer
+tax declaration deduction exemption rebate vat invoice
+corporate finance working capital turnover inventory
+ebitda net gross profit margin operating cost
+depreciation amortization asset impairment write off
+bond yield coupon maturity face value credit rating
+sovereign debt treasury bill municipal bond junk bond
+stock market capitalization float outstanding share
+etf index fund passive active management
+roic roi roa return investment asset
+liquid asset fixed asset intangible asset goodwill
+balance sheet asset liability equity accounting equation
+cash flow operating investing financing statement
+financial ratio current quick debt equity turnover
+credit score credit limit overdue bad debt collection
+bank loan mortgage personal business credit line
+venture capital term sheet valuation cap dilution
+equity round seed series a b c pre ipo exit
+stock split reverse split dividend reinvestment drp
+bullish bearish sideways consolidation breakout breakdown
+support resistance level trend moving average macd rsi kdj bollinger band
+volume spike accumulation distribution institutional retail investor
+short squeeze pump dump insider trading regulation sec cftc
+crypto token coin blockchain layer1 layer2 defi decentralized finance
+swap pool liquidity mining yield farm staking apr apy
+nft non fungible token marketplace mint floor price royalty
+dao decentralized autonomous organization governance vote
+stable coin usdt usdc dai algorithmic fiat backed
+crypto exchange spot futures perpetual leverage funding rate
+wallet mnemonic private public key hash transaction gas fee block confirm
+smart contract solidity evm erc20 erc721 erc1155
+cross chain bridge wrap token multi chain wallet
+crypto tax capital gain loss declaration reporting audit
+aml crypto compliance travel rule sanction list wallet tracking
+
+# ========== 医学生物词汇
+antibody
+bacteria
+biology
+cancer
+cell
+clinic
+covid
+diagnosis
+dna
+dose
+drug
+epidemic
+gene
+genome
+health
+hospital
+immune
+infection
+virus
+medicine
+nurse
+organ
+pathology
+patient
+protein
+surgery
+symptom
+vaccine
+virus
+xray
+acute chronic inflammation fever cough headache nausea diarrhea
+blood pressure pulse heart rate cholesterol glucose diabetes hypertension
+allergy asthma pneumonia bronchitis gastritis ulcer nephritis arthritis
+tumor malignant benign metastasis chemotherapy radiotherapy immunotherapy
+dna rna chromosome gene mutation genetic heredity cell division mitosis
+enzyme hormone antibody antigen lymphocyte leukocyte erythrocyte platelet
+microbe bacteria fungus parasite pathogen contagion transmission incubation period
+vaccination booster shot antibody titer herd immunity variant strain mutant
+epidemiology outbreak pandemic endemic isolation quarantine contact tracing
+pharmaceutical tablet capsule injection ointment intravenous oral administration
+anesthesia scalpel suture transplant minimally invasive laparoscopy orthopedic surgery
+ct mri ultrasound scan biopsy specimen lab test blood urine stool routine
+cardiology neurology gastroenterology orthopedics dermatology pediatrics gynecology
+metabolism nutrition vitamin mineral protein carbohydrate fat fiber
+autoimmune disease rheumatoid lupus multiple sclerosis immunodeficiency
+antibiotic antiviral antifungal drug resistance side effect adverse reaction
+wound healing scar tissue regeneration stem cell organ donor transplant rejection
+mental health depression anxiety schizophrenia insomnia bipolar disorder psychotherapy
+rehabilitation physical therapy occupational therapy recovery training disability
+pathogen genome sequencing variant omicron delta alpha coronavirus influenza flu
+respiratory tract digestive tract circulatory nervous endocrine excretory system
+cell membrane cytoplasm nucleus mitochondria ribosome protein synthesis
+immunoglobulin igg igm iga immune response innate adaptive immunity
+steroid hormone cortisol insulin adrenaline thyroxine estrogen testosterone
+oncology carcinoma sarcoma lymphoma leukemia tumor marker biopsy pathology report
+viral replication spike protein receptor binding antibody neutralization vaccine mrna
+clinical trial phase 1 2 3 placebo control group efficacy safety adverse event
+public health disease prevention sanitation disinfection sterilization mask protective gear
+chronic disease management long term medication regular check up monitoring indicator
+
+# ========== 法律法务词汇
+accuse
+agreement
+arbitration
+attorney
+breach
+case
+civil
+contract
+copyright
+court
+crime
+criminal
+damages
+defendant
+evidence
+fine
+guilty
+intellectual property
+judge
+judgment
+law
+lawyer
+liability
+license
+litigation
+patent
+plaintiff
+privacy
+property
+right
+sentence
+sue
+trademark
+tort
+verdict
+will
+administrative law civil law criminal law commercial law international law
+legal person natural person citizen legal capacity civil conduct capacity
+contract clause obligation right creditor debtor performance termination rescind
+breach of contract liquidated damages compensation actual loss foreseeable loss
+intellectual property ip copyright trademark patent utility model design right
+software copyright work registration infringement cease desist compensation lawsuit
+trademark registration class similar mark well known trademark counterfeit passing off
+patent novelty inventiveness practicality application authorization invalidation
+trade secret confidentiality agreement non disclosure nda non compete clause
+personal right portrait right reputation right privacy right name right honor right
+tort liability fault liability no fault liability presumption of fault
+trespass damage compensation mental damage solatium punitive damages
+civil procedure lawsuit litigation plaintiff defendant third party witness evidence
+documentary evidence physical evidence witness testimony audio video electronic data
+preservation of evidence appraisal authentication cross examination burden of proof
+court of first instance appeal second instance retrial enforcement execution
+arbitration arbitration clause arbitral award enforcement arbitration institution mediation
+criminal law crime criminal suspect defendant victim victim private prosecution public prosecution
+intentional crime negligent crime attempted crime preparatory crime joint crime principal accomplice accessory
+penalty fixed term imprisonment detention control fine confiscation property death penalty probation
+recidivist voluntary surrender meritorious service mitigation lighter punishment exemption
+illegally occupy fraud theft robbery assault intentional injury defamation insult
+network crime cyber fraud data theft illegal access personal information disclosure
+administrative penalty warning fine confiscation revocation license detention administrative litigation
+administrative license administrative punishment administrative reconsideration complaint
+labor law labor contract salary overtime social insurance work injury dismissal economic compensation
+marriage family law marriage registration divorce alimony child support property division succession inheritance
+notary public notarization will testament hereditary heir legal heir intestate succession
+real estate law property right house sale contract mortgage registration easement lease
+security law mortgage pledge guarantee surety mortgage registration priority of repayment
+foreign related law international contract jurisdiction applicable law recognition enforcement foreign judgment
+data protection law personal information protection consent data deletion cross border data transmission
+compliance risk internal control legal audit regulatory supervision penalty sanction
+administrative license market access qualification filing record business registration
+anti monopoly law monopoly agreement abuse dominant position concentration business operator
+consumer rights protection law product liability false advertising fraud three guarantees return exchange repair
+
+# ========== 工业/化学/地理/天文专业词
+acid
+aluminum
+atom
+carbon
+chemical
+circuit
+copper
+crude oil
+electricity
+element
+engine
+fuel
+gas
+geology
+glacier
+gravity
+hydrogen
+iron
+laser
+magnet
+mars
+mass
+metal
+mineral
+molecule
+moon
+nitrogen
+nuclear
+ocean
+orbit
+oxygen
+planet
+plastic
+pressure
+radiation
+river
+rock
+satellite
+silicon
+solar
+star
+steel
+sun
+telescope
+titanium
+uranium
+valve
+voltage
+water
+wave
+wind
+workshop
+astronomy galaxy constellation nebula black hole supernova asteroid comet meteor
+solar system planet earth venus mars jupiter saturn uranus neptune pluto dwarf planet
+satellite artificial satellite space station rocket spacecraft shuttle launch orbit reentry
+gravitational force newton relativity quantum physics photon electron proton neutron quark
+element periodic table metal nonmetal metalloid alkali metal alkaline earth rare earth element
+chemical reaction oxidation reduction combustion acid base neutralization precipitation crystallization
+organic chemistry hydrocarbon alcohol aldehyde ketone carboxylic acid ester polymer plastic rubber fiber
+inorganic chemistry oxide hydroxide salt mineral crystal ion ionic bond covalent bond metal bond
+petroleum crude oil refining gasoline diesel kerosene lubricant asphalt petrochemical ethylene propylene
+mechanical engineering gear bearing shaft piston cylinder crankshaft transmission reducer pump fan compressor
+hydraulic pneumatic system oil cylinder air cylinder valve pressure gauge pipeline filter accumulator
+electrical engineering circuit resistor capacitor inductor diode triode ic integrated circuit transformer motor generator
+alternating current direct current ac dc voltage current resistance power watt kilowatt hertz frequency
+new energy solar photovoltaic wind turbine lithium battery hydrogen fuel cell energy storage power station
+geology crust mantle core plate tectonics fault fold mountain volcano magma lava sedimentary igneous metamorphic rock
+hydrology river lake sea ocean tide wave current groundwater aquifer glacier ice sheet permafrost soil erosion
+meteorology atmosphere troposphere stratosphere ozone layer cloud rain snow thunder lightning typhoon hurricane monsoon
+material science alloy stainless steel carbon steel aluminum alloy copper alloy magnesium alloy composite material ceramic glass
+manufacturing industry casting forging stamping welding machining cnc lathe milling grinder 3d printing injection molding
+automotive engine chassis suspension brake steering transmission gearbox exhaust emission new energy ev battery motor
+aerospace aircraft airplane helicopter drone aero engine aerodynamic lift drag wind tunnel composite material heat resistant alloy
+civil engineering bridge tunnel dam highway railway subway high speed rail building structure concrete steel reinforcement foundation
+environmental science pollutant waste water waste gas solid waste sewage treatment carbon emission carbon neutral carbon peak
+agriculture crop fertilizer pesticide soil irrigation greenhouse planting livestock breeding aquaculture farm machinery
+
+# ========== 美食服饰生活类词汇
+bake
+beef
+biscuit
+bread
+breakfast
+buffet
+cake
+candy
+cheese
+chocolate
+cook
+cuisine
+dessert
+dinner
+drink
+egg
+fastfood
+fruit
+garlic
+grape
+hamburger
+hotpot
+juice
+lamb
+lunch
+mango
+milk
+noodle
+onion
+orange
+pizza
+pork
+rice
+salad
+seafood
+snack
+steak
+sugar
+sushi
+tomato
+vegetable
+watermelon
+wine
+yogurt
+bag
+belt
+blouse
+boot
+cap
+coat
+cotton
+dress
+fabric
+fashion
+glasses
+gown
+hat
+jacket
+jeans
+leather
+mask
+pants
+ring
+scarf
+shoe
+silk
+skirt
+sock
+suit
+sweater
+t-shirt
+tie
+watch
+wool
+apple banana pear peach strawberry blueberry cherry kiwi avocado coconut pineapple lemon lychee longan
+spicy sour sweet bitter salty umami seasoning salt sugar vinegar soy sauce oyster sauce chili pepper cumin cinnamon star anise
+western food steak pasta risotto sandwich hot dog fried chicken fries muffin croissant macaron tiramisu cheese cake
+chinese cuisine sichuan cantonese shandong huaiyang braised steamed boiled fried roasted stewed braised braised in brown sauce
+hot pot mandarin duck pot beef roll lamb roll mushroom tofu kelp vermicelli dipping sauce sesame sauce garlic sesame oil
+barbecue skewer grilled meat rib sausage corn potato vegetable skewer marinade spice barbecue sauce honey sauce
+dessert pudding jelly ice cream popsicle milk tea bubble tea taro ball pudding coconut jelly fruit tea black tea green tea oolong tea pu'er tea
+seafood shrimp crab lobster squid octopus fish abalone scallop sea cucumber clam shellfish steamed seafood garlic steamed soy sauce braised seafood
+meat pork belly rib lean pork pig trotter beef brisket beef tendon lamb chop duck chicken goose turkey pigeon braised meat cured meat bacon sausage ham
+staple food rice steamed bun bun dumpling wonton spring roll pancake noodle ramen udon soba rice noodle pasta spaghetti macaroni
+snack potato chips popcorn candy chocolate caramel fudge wafer cookie cracker dried fruit nut almond walnut cashew peanut pistachio
+beverage mineral water cola sprite orange juice grape juice mango juice coconut milk coffee latte cappuccino espresso americano mocha milk tea fruit soda beer red wine white wine champagne whiskey vodka rum brandy
+clothing style casual formal business sport streetwear vintage minimalist gothic lolita hiphop preppy y2k aesthetic
+fabric material cotton linen silk wool polyester nylon spandex denim leather suede velvet chiffon satin canvas
+upper wear t-shirt tank top shirt blouse hoodie sweatshirt jacket coat windbreaker parka down jacket blazer suit vest cardigan sweater knitwear
+lower wear jeans casual pants slacks sweatpants shorts skirt pleated skirt midi skirt maxi skirt mini skirt leather skirt denim skirt
+footwear sneaker canvas shoe leather shoe loafer boot ankle boot high heel sandal slipper flip flop trainer running shoe basketball shoe
+accessory hat baseball cap bucket hat beret fedora scarf necktie bow tie belt leather belt handbag backpack tote bag crossbody bag wallet purse glasses sunglasses watch bracelet necklace ring earring hairpin headband scrunchie sock stocking pantyhose glove mask
+seasonal clothing summer short sleeve thin skirt winter down coat thick sweater thermal underwear autumn windbreaker spring thin jacket
+fashion accessories cosmetic lipstick foundation eyeshadow blush mascara eyeliner concealer powder highlighter contour palette skincare toner essence serum cream lotion sunscreen mask cleanser exfoliator
+jewelry gold silver platinum diamond ruby sapphire emerald pearl alloy stainless steel jewelry chain pendant earring stud ring band bracelet anklet
+lifestyle furniture sofa bed table chair cabinet bookshelf wardrobe coffee table tv cabinet desk office chair mattress pillow quilt blanket curtain carpet rug lamp chandelier floor lamp table lamp led light decoration painting vase ornament potted plant succulent flower rose lily tulip orchid sunflower green plant ivy monstera
+daily supplies toothbrush toothpaste shampoo body wash soap facial towel bath towel toilet paper tissue paper trash bag mop broom vacuum cleaner washing machine refrigerator air conditioner tv computer tablet mobile phone charger cable power socket lamp bulb fan air humidifier dehumidifier water kettle induction cooker microwave oven oven gas stove frying pan wok pot bowl plate chopsticks spoon fork knife cup mug thermos bottle storage box drawer organizer hanger laundry basket detergent softener bleach stain remover
+
+# ========== 运动体育词汇
+athlete
+badminton
+basketball
+bowling
+boxing
+champion
+coach
+compete
+court
+cycling
+exercise
+football
+game
+golf
+gym
+hockey
+jog
+jump
+league
+match
+medal
+olympic
+race
+runner
+score
+skate
+ski
+soccer
+sport
+swim
+table tennis
+tennis
+track
+train
+volleyball
+weightlifting
+win
+world cup
+athletics sprint 100m 200m 400m hurdle long jump high jump triple jump shot put discus javelin marathon cross country race relay race track and field stadium track runway starting block finish line stopwatch timing scoreboard
+ball sports basketball dribble pass shoot layup three pointer free throw rebound assist steal block turnover point guard shooting guard small forward power forward center referee whistle foul technical foul timeout quarter half overtime championship playoff finals league tournament arena court hoop backboard net
+soccer football goalkeeper defender midfielder striker pass cross header volley penalty kick free kick corner kick offside foul yellow card red card substitution captain team jersey cleat turf grass pitch world cup euro cup champions league premier league la liga serie a bundesliga ligue 1
+volleyball spike block dig serve receive set point match point set libero outside hitter opposite hitter middle blocker setter court net antenna
+tennis forehand backhand serve ace rally volley drop shot grand slam wimbledon us open french open australian open clay court hard court grass court racket ball net umpire line judge
+table tennis ping pong forehand loop backhand chop serve spin topspin backspin table racket rubber blade ball table net match singles doubles mixed doubles olympic event world championship
+badminton smash clear drop shot drive lob forehand backhand racket shuttlecock court net singles doubles tournament olympic medal gold silver bronze
+combat sports boxing mma mixed martial arts kickboxing taekwondo karate judo wrestling sparring punch kick block dodge roundhouse kick jab hook uppercut match ring glove mouth guard weight class champion knockout tko submission hold
+winter sports ski alpine ski cross country ski snowboard snow sledge ice skating figure skating speed skating ice hockey curling bobsleigh luge snow mountain ski resort snow track ice rink snowboard park half pipe jump ramp
+water sports swimming freestyle breaststroke backstroke butterfly stroke diving platform springboard synchronized diving surfing wave surfboard paddle board kayaking canoe sailing yacht rowing water polo snorkeling scuba diving wetsuit goggle flipper life jacket
+fitness gym workout weightlifting dumbbell barbell bench press squat deadlift shoulder press pull up push up plank sit up yoga pilates aerobics zumba treadmill elliptical trainer spinning bike resistance band fitness mat protein powder muscle training abs biceps triceps leg muscle core strength cardio aerobic anaerobic fat loss muscle gain bodybuilding personal trainer coach gym equipment locker room towel water bottle sports wear leggings sports bra tank top running shoe sneaker sweatband wrist guard knee pad ankle brace protective gear
+outdoor sports cycling mountain bike road bike bicycle helmet cycling jersey shorts climbing rock climbing mountaineering hiking backpack tent sleeping bag climbing rope carabiner harness hiking boot trail mountain peak camping outdoor camp picnic frisbee skateboard longboard scooter parkour street workout obstacle course marathon running race track running club city run half marathon full marathon road race charity run
+competitive event olympic games summer olympic winter olympic paralympic games national games asian games world championship continental cup league cup friendly match exhibition game qualifier group stage knockout round semi final final championship trophy medal podium award ceremony national anthem flag athlete village opening ceremony closing ceremony referee umpire linesman coach manager substitute reserve player captain team uniform jersey number team logo sponsor advertising court stadium venue ticket audience spectator cheer cheerleader chant slogan fan support merchandise jersey hat scarf badge sports brand nike adidas puma under armour li ning anta xtep peak sports equipment ball racket bat glove helmet protective pad fitness gear water bottle sports drink energy drink protein bar supplement electrolyte powder recovery massage foam roller stretch relax muscle relieve soreness injury sprain strain fracture cramp ice compress hot compress rehabilitation physical therapy sports doctor first aid kit bandage plaster antiseptic
+
+# ========== 影视娱乐二次元游戏术语
+anime
+animation
+avatar
+boss
+cinema
+comic
+cosplay
+cutscene
+drama
+episode
+film
+game
+guild
+hero
+level
+live action
+manga
+movie
+npc
+ost
+pixel
+plot
+pv
+quest
+rank
+retro game
+rpg
+season
+series
+stream
+tiktok
+trailer
+vtuber
+weeb
+web drama
+youtube
+game genre rpg role playing game fps first person shooter tps third person shooter moba multiplayer online battle arena slg simulation strategy game sandbox open world platformer puzzle rhythm game idle game roguelike horror game survival game racing game sports game fighting game mmorpg massively multiplayer online role playing game
+game character hero protagonist antagonist villain npc non player character mob monster boss elite boss world boss raid boss mini boss summon pet companion mount warrior mage archer assassin tank healer support dps damage dealer crowd control cc buff debuff dot damage over time hot heal over time shield armor hp health mp mana stamina energy rage cooldown cd skill ultimate passive talent trait equipment weapon armor helmet chest pants shoe glove ring necklace accessory weapon type sword axe bow staff dagger gun rifle shotgun pistol sniper grenade rocket launcher magic wand staff spell scroll potion elixir recovery item food buff material crafting ore wood cloth leather gem crystal upgrade enhance refine forge enchant inlay gemstone set equipment rare epic legendary mythic orange purple blue green white quality tier star level rank grade combat power cp attack defense crit critical hit rate crit damage hit dodge block penetration resistance fire water earth wind light dark poison bleed stun silence freeze slow root knock up knock back airborne fear charm confusion taunt sleep paralyzed immune invincible invulnerable shield absorb damage reflection lifesteal vampirism mana steal energy drain resource gold silver coin diamond crystal jade token coupon ticket gacha draw banner limited time pool pity system guaranteed pull duplicate fragment shard exchange shop market auction trade mail inbox gift package daily reward weekly reward monthly login event limited event festival activity cross server arena pvp player versus player pve player versus environment dungeon instance raid team copy normal hard hell nightmare difficulty single player co op multiplayer cross platform pc mobile switch ps5 xbox steam epic origin ubisoft game launcher account uid id nickname avatar frame title badge medal achievement trophy quest main story side quest daily quest weekly quest guild mission event quest exploration task collect item kill monster rescue npc deliver goods escort defend tower defense map world map continent region city village forest desert snow mountain ocean cave dungeon labyrinth portal teleport fast travel waypoint marker mini map coordinate navigation mount flying mount land mount water mount pet evolve star up skill upgrade talent tree passive tree skill point reset reincarnation rebirth transcend ascension breakthrough tier promotion rank up arena ladder rank season reward leaderboard top1 top10 top100 server rank cross server rank world rank championship tournament match knockout semi final final reward trophy medal frame title exclusive skin costume outfit weapon skin effect special particle animation voice line emote gesture dance idle action victory defeat death respawn revive resurrection revive item soul stone revive coin stamina limit recovery stamina potion free stamina gift stamina refresh daily reset weekly reset monthly reset server maintenance update patch note balance adjustment nerf buff skill modify bug fix exploit cheat hack anti cheat ban mute kick offline punishment blacklist report appeal customer service feedback suggestion gift code redeem code cdkey exchange reward limited skin collaboration skin ip linkage anime manga movie comic cross over event vtuber virtual streamer live stream room gift super chat subscription fan group membership badge live emoticon sticker voice pack bgm ost original sound track pv promotional video cutscene animation opening ed ending song op ed character voice actor cv voice actress dubbing script plot story line chapter volume episode season series cliffhanger twist surprise ending happy ending bad ending sad ending tragic plot romance comedy horror thriller suspense sci fi fantasy xianxia wuxia urban campus historical ancient modern future apocalyptic post disaster zombie monster alien dragon elf orc dwarf human beast demon angel god immortal cultivator daoist monk martial artist swordsman immortal cultivation spirit root spiritual power core breakthrough golden elixir nascent soul yuanying tribulation thunder punishment magic spell talisman array formation beast taming spirit pet contract blood contract sect clan school elder disciple master junior senior ancestor palace imperial court emperor princess prince knight warrior knight kingdom empire alliance union faction hostile neutral friendly npc dialogue branch option multiple ending choice system romance route harem single love interest marriage wedding couple companion intimacy favorability gift date interaction confession proposal divorce break up friendship rival enemy villain backstory tragic past redemption arc character growth development transformation power up awakening latent power hidden ability secret skill ultimate form transformation beast mode dragon mode god mode dark form light form costume change casual formal battle outfit swimsuit wedding dress school uniform maid outfit lolita gothic punk y2k streetwear cosplay costume coser cosplayer convention comic con anime expo doujinshi fan art fan fiction fanfic doujin game mod modification texture pack custom skin self made map editor workshop upload download share community forum post comment like dislike collect follow subscribe repost forward trending hot topic viral meme screenshot clip short video tiktok douyin youtube bilibili b station barrage bullet screen comment section up creator upload original video edit montage clip cut transition filter special effect subtitle caption dub voice over bgm background music sound effect seiyuu voice sample meme template viral sound trending audio challenge dance cover song cover cosplay skit short drama web series mini drama vertical screen drama fast pace plot reversal sweet sad abusive love triangle rich president campus crush youth romance family conflict workplace struggle urban daily supernatural ghost horror suspense mystery detective crime case police investigation murderer victim clue evidence suspect interrogation arrest jail prison escape revenge justice happy ending redemption healing warm inspirational tearjerker emotional plot high sugar sweet moment heart wrenching sad scene fight battle war large scale army siege city defense invasion counterattack alliance battle world war server war cross server battlefield territory occupy resource point mine forest city castle stronghold fortress alliance boss world raid team co op voice chat team channel guild chat private message friend chat blacklist block mute report harassment spam toxic player verbal abuse insulting cheat hack multi account alt account bot auto script farming resource exploit loop hole official ban punishment appeal feedback customer service game update new version expansion dlc downloadable content season pass battle pass tier reward limited skin exclusive weapon mount pet avatar frame title medal event limited time map dungeon boss monster activity quest free reward recharge payment top up vip member privilege monthly card weekly card annual card first recharge double bonus limited discount coupon shopping mall store limited pack gift box random box blind box mystery pack probability gacha rate up limited pool time limited character weapon skin mount pet fragment exchange shop recycle decomposition dismantle duplicate item material coin crystal resource exchange rate trade market auction house bid price buy sell consignment transaction tax mail delivery storage warehouse backpack bag grid capacity expand locker safe deposit box material sort filter search item name keyword quick access shortcut hotkey control key mouse operation touch screen mobile virtual joystick button layout custom control setting graphic quality resolution frame rate fps limit smooth mode low power mode battery save anti lag optimization shader texture shadow particle effect bloom blur special effect volume bgm sound voice sfx music mute separate adjustment subtitle size color font speed playback speed skip cutscene auto play story auto dialogue quick dialogue skip button fast forward rewind pause screenshot recording clip export share social platform wechat qq twitter instagram facebook discord reddit community group fan club official fan group discord server telegram group official website forum wiki database character skill equipment monster item map quest guide walkthrough strategy tutorial beginner guide advanced tip combo skill rotation build talent point allocation equipment set matching gem inlay enchant refine enhance upgrade artifact weapon holy relic exclusive set rare limited collaboration item ip linkage cross over anime movie comic character skin mount pet limited event time limited map dungeon boss quest reward exclusive title frame medal avatar chat bubble emoji gesture dance action voice line bgm ost pv promotional video cutscene animation op ed opening ending song full version single album music download stream playlist artist singer band composer lyricist original song cover remix dj version viral trending sound short video bgm dance challenge choreography dance cover cosplay skit drama clip movie cut highlight montage edit transition filter special effect subtitle caption dub voice over voice actor cv seiyuu interview behind the scene making of documentary live action film adaptation anime adaptation manga novel light novel web novel manhua manhwa webtoon comic book physical book e book digital read platform subscription chapter unlock pay per chapter free trial daily read reward ticket coin exchange gift package character illustration art official art wallpaper phone desktop background lock screen profile picture avatar icon sticker emoticon pack emoji chat bubble border frame dynamic animation static image 4k hd ultra high definition vertical horizontal ratio 9:16 16:9 1:1 square pixel art retro pixel game 8bit 16bit old classic game arcade game console game nes snes ps1 ps2 ps3 ps4 ps5 xbox switch wii game boy psp nds retro emulator rom download patch cheat code save file modify editor mod texture custom skin map character weapon pet equipment add on expansion dlc workshop upload download community share custom content fan made map quest story character skin weapon mount pet mod pack total conversion mod overhaul mod balance adjust skill modify item add new monster boss dungeon map quest plot story branch multiple ending romance route new npc dialogue interaction costume outfit skin weapon effect particle animation voice line bgm ost music pack replace original sound track custom bgm battle music town map dungeon theme song op ed opening ending remix cover version fan made animation short film doujin animation 3d animation 2d hand drawn anime manga manhwa webtoon comic panel frame speech bubble text dialogue sound effect onomatopoeia visual effect speed line flash bang explosion spark smoke blood sweat tear rain snow wind cloud lightning thunder star moon sun sky ocean mountain forest tree flower grass animal bird fish beast dragon phoenix tiger lion wolf cat dog rabbit fox bear snake lizard insect butterfly bee ant mosquito spider fantasy creature elf fairy demon angel ghost spirit wraith skeleton zombie vampire werewolf mermaid centaur unicorn pegasus griffin hydra chimera goblin orc dwarf giant titan dragon turtle qilin pixiu nine tail fox spirit beast sacred beast divine beast myth legend folklore fairy tale ancient legend hero epic warrior knight paladin rogue mage witch wizard sorcerer warlock priest cleric healer bard hunter ranger assassin thief merchant blacksmith alchemist tailor cook farmer miner fisherman craftsman artisan guild master elder leader captain commander general king queen lord noble aristocrat civilian commoner slave servant maid butler guard soldier mercenary bandit outlaw pirate robber criminal fugitive prisoner jailer police detective sheriff judge lawyer doctor nurse teacher student professor scholar sage wise man prophet seer oracle fortune teller magician illusionist performer entertainer singer dancer actor

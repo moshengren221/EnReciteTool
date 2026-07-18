@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的生词本 - 英语背诵助手</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 生词本页面专用样式 */
+        .starred-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .page-header h1 .count-badge {
+            font-size: 14px;
+            background: var(--color-accent-fg);
+            color: #fff;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .toolbar .search-box {
+            flex: 1;
+            min-width: 180px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .toolbar .search-box input {
+            flex: 1;
+            padding: 8px 14px;
+            border: 1px solid var(--color-border-default);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            background: var(--color-canvas-default);
+            color: var(--color-fg-default);
+        }
+
+        .toolbar .search-box input:focus {
+            border-color: var(--color-accent-fg);
+            outline: none;
+            box-shadow: 0 0 0 3px var(--color-accent-subtle);
+        }
+
+        /* 单词卡片网格 */
+        .word-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .word-card {
+            background: var(--color-canvas-default);
+            border: 1px solid var(--color-border-default);
+            border-radius: 8px;
+            padding: 16px 18px;
+            transition: all 0.25s var(--ease-standard);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .word-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .word-card .word {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--color-accent-fg);
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+
+        .word-card .definition {
+            font-size: 14px;
+            color: var(--color-fg-muted);
+            line-height: 1.6;
+            flex: 1;
+            word-break: break-word;
+        }
+
+        .word-card .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--color-border-default);
+            justify-content: flex-end;
+        }
+
+        .word-card .card-actions .btn-sm {
+            font-size: 12px;
+            padding: 3px 12px;
+        }
+
+        .word-card .card-actions .btn-sm.btn-danger {
+            color: var(--color-danger-fg);
+        }
+
+        .word-card .card-actions .btn-sm.btn-danger:hover {
+            background: var(--color-danger-subtle);
+        }
+
+        .word-card .card-index {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 12px;
+            color: var(--color-fg-muted);
+            opacity: 0.5;
+        }
+
+        /* 空状态 */
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--color-fg-muted);
+        }
+
+        .empty-state .icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state h2 {
+            font-size: 20px;
+            color: var(--color-fg-default);
+            margin-bottom: 8px;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+
+        /* 统计栏 */
+        .stats-bar {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            background: var(--color-canvas-subtle);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border-default);
+            margin-bottom: 16px;
+        }
+
+        .stats-bar .stat-item {
+            font-size: 13px;
+            color: var(--color-fg-muted);
+        }
+
+        .stats-bar .stat-item strong {
+            color: var(--color-fg-default);
+        }
+
+        /* 登录提醒 */
+        .login-reminder {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .login-reminder .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .login-reminder h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .login-reminder p {
+            color: var(--color-fg-muted);
+            margin-bottom: 20px;
+        }
+
+        /* 加载动画 */
+        .loading-spinner {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border: 3px solid var(--color-border-default);
+            border-top-color: var(--color-accent-fg);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--color-fg-muted);
+        }
+
+        .loading-text .loading-spinner {
+            display: block;
+            margin: 0 auto 16px;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 99999;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .toast.success { background: #2da44e; }
+        .toast.error { background: #cf222e; }
+        .toast.warning { background: #d29922; }
+        .toast.info { background: #0969da; }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .starred-container {
+                padding: 16px;
+            }
+
+            .page-header h1 {
+                font-size: 20px;
+            }
+
+            .word-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .word-card .word {
+                font-size: 18px;
+            }
+
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .toolbar .search-box {
+                min-width: auto;
+            }
+
+            .stats-bar {
+                gap: 12px;
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .word-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📖 我的生词本</h1>
+        <div class="d-flex align-center" style="gap: 12px; flex-wrap: wrap;">
+            <a href="index.html" class="btn btn-sm">← 返回首页</a>
+            <span id="userInfo" style="font-size: 13px; color: #8b949e;"></span>
+        </div>
+    </header>
+
+    <div class="starred-container">
+        <!-- 登录提醒 -->
+        <div id="loginReminder" class="login-reminder" style="display:none;">
+            <div class="icon">🔐</div>
+            <h2>请先登录</h2>
+            <p>登录后可以查看和管理您的生词本，数据云端存储，多设备同步。</p>
+            <a href="index.html" class="btn btn-primary">前往登录</a>
+        </div>
+
+        <!-- 主内容 -->
+        <div id="mainContent" style="display:none;">
+            <!-- 头部 -->
+            <div class="page-header">
+                <h1>
+                    📚 我的生词本
+                    <span class="count-badge" id="wordCountBadge">0</span>
+                </h1>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                    <button class="btn btn-danger btn-sm" onclick="clearAllWords()">🗑️ 清空全部</button>
+                </div>
+            </div>
+
+            <!-- 统计 -->
+            <div class="stats-bar">
+                <span class="stat-item">📚 总单词数：<strong id="totalCount">0</strong></span>
+                <span class="stat-item">📌 已用空间：<strong id="usedSlots">0</strong>/30</span>
+                <span class="stat-item" id="syncStatus" style="color:var(--color-fg-muted);">☁️ 已同步</span>
+            </div>
+
+            <!-- 工具栏 -->
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="搜索单词或释义..." oninput="filterWords()">
+                    <button class="btn btn-sm" onclick="document.getElementById('searchInput').value='';filterWords()">✕</button>
+                </div>
+                <div style="display:flex; gap:8px; align-items:center;">
+                    <button class="btn btn-sm" onclick="refreshWords()">🔄 刷新</button>
+                    <button class="btn btn-sm btn-primary" onclick="exportWords()">📥 导出</button>
+                </div>
+            </div>
+
+            <!-- 单词列表 -->
+            <div id="wordList">
+                <div class="loading-text">
+                    <div class="loading-spinner"></div>
+                    加载中...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ============================================================
+        //  状态
+        // ============================================================
+        var words = [];
+        var filteredWords = [];
+        var isLoggedIn = false;
+        var userId = null;
+
+        // ============================================================
+        //  Toast
+        // ============================================================
+        function showToast(message, type) {
+            var toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + (type || 'info');
+            void toast.offsetWidth;
+            toast.classList.add('show');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ============================================================
+        //  检查登录状态
+        // ============================================================
+        function checkLogin() {
+            fetch('oauth.php?action=me')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.code === 200) {
+                        isLoggedIn = true;
+                        userId = data.data.id;
+                        document.getElementById('userInfo').textContent = '👤 ' + (data.data.display_name || '用户');
+                        document.getElementById('loginReminder').style.display = 'none';
+                        document.getElementById('mainContent').style.display = 'block';
+                        loadWords();
+                    } else {
+                        isLoggedIn = false;
+                        document.getElementById('userInfo').textContent = '未登录';
+                        document.getElementById('loginReminder').style.display = 'block';
+                        document.getElementById('mainContent').style.display = 'none';
+                    }
+                })
+                .catch(function(e) {
+                    document.getElementById('userInfo').textContent = '❌ 连接失败';
+                    document.getElementById('loginReminder').style.display = 'block';
+                    document.getElementById('mainContent').style.display = 'none';
+                });
+        }
+
+        // ============================================================
+        //  加载单词
+        // ============================================================
+        function loadWords() {
+            var listEl = document.getElementById('wordList');
+            listEl.innerHTML = '<div class="loading-text"><div class="loading-spinner"></div>加载中...</div>';
+
+            fetch('word_api.php?action=list')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.code === 200) {
+                        words = data.data || [];
+                        filteredWords = words.slice();
+                        renderWords();
+                        updateStats();
+                    } else if (data.code === 401) {
+                        isLoggedIn = false;
+                        document.getElementById('loginReminder').style.display = 'block';
+                        document.getElementById('mainContent').style.display = 'none';
+                    } else {
+                        showToast(data.message || '加载失败', 'error');
+                        listEl.innerHTML = '<div class="empty-state"><div class="icon">❌</div><h2>加载失败</h2><p>' + (data.message || '请稍后重试') + '</p></div>';
+                    }
+                })
+                .catch(function(e) {
+                    showToast('网络错误，请重试', 'error');
+                    listEl.innerHTML = '<div class="empty-state"><div class="icon">🌐</div><h2>网络错误</h2><p>请检查网络连接后刷新页面</p></div>';
+                });
+        }
+
+        // ============================================================
+        //  渲染单词列表
+        // ============================================================
+        function renderWords() {
+            var listEl = document.getElementById('wordList');
+            var displayWords = filteredWords;
+
+            if (displayWords.length === 0) {
+                if (words.length === 0) {
+                    listEl.innerHTML = 
+                        '<div class="empty-state">' +
+                        '<div class="icon">📭</div>' +
+                        '<h2>生词本为空</h2>' +
+                        '<p>在文章页面双击单词或拖拽到生词本区域，即可收藏单词。</p>' +
+                        '<a href="index.html" class="btn btn-primary">去背单词</a>' +
+                        '</div>';
+                } else {
+                    listEl.innerHTML = 
+                        '<div class="empty-state">' +
+                        '<div class="icon">🔍</div>' +
+                        '<h2>没有匹配的单词</h2>' +
+                        '<p>试试其他关键词</p>' +
+                        '</div>';
+                }
+                return;
+            }
+
+            var html = '<div class="word-grid">';
+            displayWords.forEach(function(word, index) {
+                var def = word.definition || '（无释义）';
+                html += 
+                    '<div class="word-card">' +
+                    '<span class="card-index">#' + (index + 1) + '</span>' +
+                    '<div class="word">' + escapeHtml(word) + '</div>' +
+                    '<div class="definition">' + escapeHtml(def) + '</div>' +
+                    '<div class="card-actions">' +
+                    '<button class="btn btn-sm" onclick="speakWord(\'' + escapeHtml(word) + '\')">🔊 发音</button>' +
+                    '<button class="btn btn-sm btn-danger" onclick="deleteWord(\'' + escapeHtml(word) + '\')">🗑️ 删除</button>' +
+                    '</div>' +
+                    '</div>';
+            });
+            html += '</div>';
+            listEl.innerHTML = html;
+        }
+
+        // ============================================================
+        //  更新统计
+        // ============================================================
+        function updateStats() {
+            var count = words.length;
+            document.getElementById('wordCountBadge').textContent = count;
+            document.getElementById('totalCount').textContent = count;
+            document.getElementById('usedSlots').textContent = count;
+
+            var statusEl = document.getElementById('syncStatus');
+            if (isLoggedIn) {
+                statusEl.textContent = '☁️ 已同步';
+                statusEl.style.color = '#2da44e';
+            } else {
+                statusEl.textContent = '💻 本地存储';
+                statusEl.style.color = 'var(--color-fg-muted)';
+            }
+        }
+
+        // ============================================================
+        //  搜索过滤
+        // ============================================================
+        function filterWords() {
+            var keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            if (!keyword) {
+                filteredWords = words.slice();
+            } else {
+                filteredWords = words.filter(function(w) {
+                    return w.toLowerCase().indexOf(keyword) !== -1 ||
+                           (w.definition && w.definition.toLowerCase().indexOf(keyword) !== -1);
+                });
+            }
+            renderWords();
+        }
+
+        // ============================================================
+        //  删除单词
+        // ============================================================
+        function deleteWord(word) {
+            if (!confirm('确认删除 "' + word + '" 吗？')) return;
+
+            fetch('word_api.php?action=delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ word: word })
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast('已删除 "' + word + '"', 'success');
+                    loadWords();
+                } else {
+                    showToast(data.message || '删除失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+        }
+
+        // ============================================================
+        //  清空全部
+        // ============================================================
+        function clearAllWords() {
+            if (!confirm('⚠️ 确认要清空所有生词吗？此操作不可撤销！')) return;
+            if (!confirm('再次确认：清空后将删除所有单词！')) return;
+
+            fetch('word_api.php?action=clear', {
+                method: 'POST'
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast('已清空所有生词', 'success');
+                    loadWords();
+                } else {
+                    showToast(data.message || '清空失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+        }
+
+        // ============================================================
+        //  发音
+        // ============================================================
+        function speakWord(word) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                var utterance = new SpeechSynthesisUtterance(word);
+                utterance.lang = 'en-US';
+                window.speechSynthesis.speak(utterance);
+            } else {
+                showToast('您的浏览器不支持语音合成', 'warning');
+            }
+        }
+
+        // ============================================================
+        //  导出
+        // ============================================================
+        function exportWords() {
+            if (words.length === 0) {
+                showToast('生词本为空，无法导出', 'warning');
+                return;
+            }
+
+            var output = '=== 我的生词本 ===\n';
+            output += '导出时间：' + new Date().toLocaleString() + '\n';
+            output += '共 ' + words.length + ' 个单词\n\n';
+            
+            words.forEach(function(word) {
+                var def = word.definition || '';
+                output += word + '\t' + def + '\n';
+            });
+
+            var blob = new Blob([output], { type: 'text/plain;charset=utf-8' });
+            var link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'my-starred-words-' + new Date().toISOString().slice(0, 10) + '.txt';
+            link.click();
+            URL.revokeObjectURL(link.href);
+            
+            showToast('导出成功！', 'success');
+        }
+
+        // ============================================================
+        //  刷新
+        // ============================================================
+        function refreshWords() {
+            showToast('🔄 刷新中...', 'info');
+            loadWords();
+        }
+
+        // ============================================================
+        //  工具函数
+        // ============================================================
+        function escapeHtml(text) {
+            if (!text) return '';
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // ============================================================
+        //  初始化
+        // ============================================================
+        checkLogin();
+    </script>
+</body>
+</html>

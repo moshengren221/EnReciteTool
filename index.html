@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="pageTitle">英语文章背诵助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1 id="siteTitle">English Memorizer / 背诵助手</h1>
+    <div class="d-flex align-center" style="gap: 10px; flex-wrap: wrap;">
+        <!-- 导航链接 -->
+        <a href="starred.html" class="btn btn-sm" style="background:transparent; color:#8b949e; border-color:#30363d;">📖 生词本</a>
+        <a href="dictionary.html" class="btn btn-sm" style="background:transparent; color:#8b949e; border-color:#30363d;">📚 词库管理</a>
+        
+        <!-- 用户信息区域 -->
+        <div id="userArea" style="display: none; align-items: center; gap: 8px; position: relative;">
+            <img id="userAvatar" src="" alt="头像" style="width: 32px; height: 32px; border-radius: 50%; cursor: pointer; border: 2px solid transparent;" onclick="toggleUserMenu()">
+            <span id="userName" style="font-size: 13px; color: #fff; cursor: pointer;" onclick="toggleUserMenu()"></span>
+            <span id="wordCountBadge" style="font-size: 11px; background: #2da44e; color: #fff; padding: 1px 8px; border-radius: 10px;">0/30</span>
+            
+            <!-- 下拉菜单 -->
+            <div id="userDropdown" style="display: none; position: absolute; top: 40px; right: 0; background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 8px 0; min-width: 160px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); z-index: 100;">
+                <div style="padding: 8px 16px; border-bottom: 1px solid #f0f0f0;">
+                    <div style="font-weight: 600; color: #24292f; font-size: 14px;" id="dropdownUserName">用户</div>
+                    <div style="font-size: 12px; color: #8b949e;" id="dropdownUserEmail">email@example.com</div>
+                </div>
+                <div style="padding: 4px 0;">
+                    <a href="starred.html" style="display: block; padding: 8px 16px; text-decoration: none; font-size: 13px; color: #24292f;">
+                        📖 我的生词本
+                    </a>
+                    <a href="dictionary.html" style="display: block; padding: 8px 16px; text-decoration: none; font-size: 13px; color: #24292f;">
+                        📚 词库管理
+                    </a>
+                    <button onclick="logout()" style="display: block; width: 100%; text-align: left; padding: 8px 16px; background: none; border: none; font-size: 13px; color: #cf222e; cursor: pointer; font-family: inherit; border-top: 1px solid #f0f0f0; margin-top: 4px;">
+                        🚪 退出登录
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 登录按钮 -->
+        <button id="loginBtn" class="btn btn-sm btn-primary" onclick="login()">🔑 登录</button>
+        
+        <span id="dictLoadLabel" class="mr-2" style="font-size: 12px; color: #8b949e;">载入词库中...</span>
+        <input type="file" id="dictFileInput" accept=".txt" class="hidden">
+        <button class="btn btn-sm" id="btnManualDict" onclick="document.getElementById('dictFileInput').click()">选择词库</button>
+    </div>
+</header>
+
+    <div class="container">
+        <div id="corsFlash" class="flash flash-warn hidden">
+            <div>
+                <strong>⚠️ 自动加载词库失败：</strong> 请手动选择 <b>miaoda-code.txt</b>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="document.getElementById('dictFileInput').click()">手动指定</button>
+        </div>
+
+        <!-- 导入面板 -->
+        <div id="importPanel" class="Box">
+            <div class="Box-header">
+                <h3 class="Box-title">请输入您要背诵的英文文章</h3>
+            </div>
+            <div class="Box-body">
+                <textarea id="articleInput" placeholder="在此粘贴或输入英文段落/文章...&#10;然后点击下方"生成背诵界面"按钮开始划词学习。"></textarea>
+                <div style="margin-top: 15px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <button class="btn" onclick="loadSampleText()">📄 演示文章</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="generateReaderView()">🚀 生成背诵界面</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阅读视图 -->
+        <div id="readerView" class="hidden">
+            <div class="control-group">
+                <button class="btn" onclick="backToEdit()">← 重新编辑</button>
+                <div class="d-flex align-center" style="gap: 5px; border: 1px solid var(--color-border-default); border-radius: 6px; padding: 2px; background: var(--color-canvas-default);">
+                    <button class="btn btn-sm" onclick="adjustFontSize(-2)">A-</button>
+                    <span id="fontSizeDisplay" style="font-size: 12px; padding: 0 5px;">18px</span>
+                    <button class="btn btn-sm" onclick="adjustFontSize(2)">A+</button>
+                </div>
+            </div>
+
+            <div class="mobile-view-tabs" id="mobileViewTabs">
+                <button class="mobile-tab-btn active" onclick="switchMobileLayout('article')">📖 文章阅读</button>
+                <button class="mobile-tab-btn" onclick="switchMobileLayout('starred')">📂 生词本 (<span id="mobileStarCount">0</span>)</button>
+            </div>
+
+            <div class="tabnav">
+                <button id="tabStudy" class="tabnav-tab selected" onclick="switchMode('study')">📖 查看与学习模式</button>
+                <button id="tabRecite" class="tabnav-tab" onclick="switchMode('recite')">🧠 背诵与挖空模式</button>
+            </div>
+
+            <div class="layout">
+                <div class="Box" id="mainArticleCol">
+                    <div class="Box-header">
+                        <div class="d-flex align-center" style="gap: 16px;">
+                            <span class="text-bold">文章阅读区域</span>
+                            <div id="reciteControls" class="hidden">
+                                <label style="cursor: pointer; font-size: 13px;">
+                                    <input type="checkbox" id="chkHideDict" onchange="toggleHideDict()"> 一键挖空词库单词
+                                </label>
+                            </div>
+                        </div>
+                        <span style="font-size: 12px; color: var(--color-fg-muted);" id="wordsCountLabel">共 0 词</span>
+                    </div>
+                    <div class="Box-body">
+                        <div id="readerText" class="reader-text mode-study"></div>
+                        <div id="modeHintText" class="mode-hint">点击词表可查看释义并朗读。双击单词或<strong>拖拽至生词本</strong>可快速收藏！</div>
+                    </div>
+                </div>
+
+                <div id="sidebarCol">
+                    <div class="Box detail-box-container" id="wordDetailBox">
+                        <div class="Box-header">
+                            <h3 class="Box-title">单词解释助手</h3>
+                        </div>
+                        <div class="Box-body">
+                            <div id="wordDetailPanel">
+                                <div class="d-flex justify-between align-center">
+                                    <h2 id="selectedWord" style="margin: 0; font-size: 24px; color: var(--color-fg-default);">--</h2>
+                                    <div class="d-flex" style="gap: 8px;">
+                                        <button class="btn btn-sm" onclick="speakSelectedWord()">🔊 发音</button>
+                                        <button class="btn btn-sm" id="btnStarWord" onclick="toggleStarSelectedWord()">☆</button>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 12px;">
+                                    <strong>解析/释义:</strong>
+                                    <p id="selectedDef" style="font-size: 14px; color: var(--color-fg-muted); line-height: 1.6; min-height: 60px; background-color: var(--color-canvas-subtle); padding: 8px; border-radius: 4px; border: 1px solid var(--color-border-default); margin-top: 5px;">
+                                        点击文章中的单词显现翻译释义...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Box">
+                        <div class="Box-header">
+                            <h3 class="Box-title">我的生词本</h3>
+                            <button class="btn btn-sm btn-danger" onclick="clearStarred()">清空</button>
+                        </div>
+                        <div class="Box-body" id="starredDropZone" style="padding: 0;">
+                            <ul id="starredList" class="starred-list">
+                                <li style="padding: 16px; color: var(--color-fg-muted); text-align: center; font-size: 13px;" id="emptyListPlaceholder">生词本为空</li>
+                            </ul>
+                        </div>
+                        <div class="Box-footer" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;"><div>
+                            <button class="btn btn-sm" onclick="exportStarred()">📥 导出生词</button>
+                            <button class="btn btn-sm" id="syncCloudBtn" style="display: none; background: var(--color-accent-fg); color: #fff;" onclick="syncToCloud()">☁️ 同步到云端</button>
+                         </div>
+                          <button class="btn btn-sm btn-danger" onclick="clearStarred()">🗑️ 清空</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端底部面板 -->
+    <div class="bottom-backdrop" id="bottomBackdrop" onclick="closeMobileDetailSheet()"></div>
+
+    <!-- ===== 统一弹窗 ===== -->
+    <div class="modal-overlay" id="globalModal">
+        <div class="modal-box">
+            <h2 id="modalTitle">标题</h2>
+            <p id="modalBody">内容</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="closeModal()">确定</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

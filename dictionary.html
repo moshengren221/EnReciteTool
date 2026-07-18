@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词库管理 - 英语背诵助手</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dict-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        .dict-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .dict-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .dict-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .dict-toolbar .search-box {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            gap: 8px;
+        }
+        .dict-toolbar .search-box input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid var(--color-border-default);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .dict-toolbar .search-box input:focus {
+            border-color: var(--color-accent-fg);
+            outline: none;
+            box-shadow: 0 0 0 3px var(--color-accent-subtle);
+        }
+        .dict-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        .dict-table th {
+            background: var(--color-canvas-subtle);
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 2px solid var(--color-border-default);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .dict-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--color-border-default);
+            vertical-align: middle;
+        }
+        .dict-table tr:hover {
+            background: var(--color-canvas-subtle);
+        }
+        .dict-table .word-cell {
+            font-weight: 600;
+            color: var(--color-accent-fg);
+            white-space: nowrap;
+        }
+        .dict-table .def-cell {
+            max-width: 400px;
+            word-break: break-word;
+        }
+        .dict-table .actions-cell {
+            white-space: nowrap;
+            display: flex;
+            gap: 4px;
+        }
+        .dict-table .actions-cell .btn-sm {
+            padding: 2px 10px;
+            font-size: 12px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .pagination .btn {
+            min-width: 36px;
+            justify-content: center;
+        }
+        .pagination .btn.active {
+            background: var(--color-accent-fg);
+            color: #fff;
+            border-color: var(--color-accent-fg);
+        }
+        .pagination .btn.active:hover {
+            background: var(--color-accent-fg);
+        }
+        .stats {
+            font-size: 13px;
+            color: var(--color-fg-muted);
+        }
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-box {
+            background: var(--color-canvas-default);
+            border-radius: 12px;
+            max-width: 560px;
+            width: 90%;
+            padding: 24px 28px 28px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            border: 1px solid var(--color-border-default);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-box h2 {
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .modal-box .form-group {
+            margin-bottom: 16px;
+        }
+        .modal-box .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        .modal-box .form-group input,
+        .modal-box .form-group textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--color-border-default);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .modal-box .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+        .upload-zone {
+            border: 2px dashed var(--color-border-default);
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: var(--color-canvas-subtle);
+        }
+        .upload-zone:hover {
+            border-color: var(--color-accent-fg);
+            background: var(--color-accent-subtle);
+        }
+        .upload-zone.dragover {
+            border-color: var(--color-accent-fg);
+            background: var(--color-accent-subtle);
+        }
+        .upload-zone input[type="file"] {
+            display: none;
+        }
+        .upload-zone p {
+            margin: 0;
+            color: var(--color-fg-muted);
+        }
+        .upload-zone strong {
+            color: var(--color-fg-default);
+        }
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 99999;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .toast.success { background: #2da44e; }
+        .toast.error { background: #cf222e; }
+        .toast.warning { background: #d29922; }
+        .toast.info { background: #0969da; }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--color-fg-muted);
+        }
+        .empty-state .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        .dict-stats-bar {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            background: var(--color-canvas-subtle);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border-default);
+            margin-bottom: 16px;
+        }
+        .dict-stats-bar .stat-item {
+            font-size: 13px;
+            color: var(--color-fg-muted);
+        }
+        .dict-stats-bar .stat-item strong {
+            color: var(--color-fg-default);
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--color-border-default);
+            border-top-color: var(--color-accent-fg);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @media (max-width: 768px) {
+            .dict-table {
+                font-size: 12px;
+            }
+            .dict-table th,
+            .dict-table td {
+                padding: 6px 8px;
+            }
+            .dict-table .def-cell {
+                max-width: 120px;
+            }
+            .dict-header h1 {
+                font-size: 18px;
+            }
+            .dict-toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .dict-toolbar .search-box {
+                min-width: auto;
+            }
+            .modal-box {
+                padding: 16px 18px 20px;
+            }
+            .dict-stats-bar {
+                gap: 12px;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📚 词库管理</h1>
+        <div class="d-flex align-center" style="gap: 12px;">
+            <a href="index.html" class="btn btn-sm">← 返回首页</a>
+            <span id="userInfo" style="font-size: 13px; color: #8b949e;"></span>
+        </div>
+    </header>
+
+    <div class="dict-container">
+        <!-- 登录警告 -->
+        <div id="loginWarning" class="flash flash-warn" style="display:none;">
+            <div>⚠️ 请先 <a href="index.html" style="color:var(--color-accent-fg);">登录</a> 后再管理词库</div>
+        </div>
+
+        <!-- 头部 -->
+        <div class="dict-header">
+            <h1>📖 词库管理</h1>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <button class="btn btn-primary" onclick="openAddModal()">➕ 添加词条</button>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">📤 上传词库</button>
+                <button class="btn btn-danger" onclick="clearDictionary()">🗑️ 清空词库</button>
+                <input type="file" id="fileInput" accept=".txt" style="display:none;" onchange="uploadFile(this)">
+            </div>
+        </div>
+
+        <!-- 统计 -->
+        <div class="dict-stats-bar" id="statsBar">
+            <span class="stat-item">📚 总词条：<strong id="totalCount">0</strong></span>
+            <span class="stat-item">📄 当前页：<strong id="currentPageInfo">1</strong></span>
+            <span class="stat-item">📌 共 <strong id="totalPagesInfo">0</strong> 页</span>
+        </div>
+
+        <!-- 搜索 -->
+        <div class="dict-toolbar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索单词或释义..." onkeyup="if(event.key==='Enter') loadWords(1)">
+                <button class="btn btn-primary" onclick="loadWords(1)">🔍 搜索</button>
+                <button class="btn" onclick="document.getElementById('searchInput').value='';loadWords(1)">✕ 清除</button>
+            </div>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <label style="font-size:13px; color:var(--color-fg-muted);">每页：</label>
+                <select id="limitSelect" onchange="loadWords(1)" style="padding:4px 8px; border-radius:4px; border:1px solid var(--color-border-default); font-family:inherit; font-size:13px;">
+                    <option value="20">20</option>
+                    <option value="50" selected>50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 词条列表 -->
+        <div class="Box">
+            <div style="overflow-x:auto;">
+                <table class="dict-table">
+                    <thead>
+                        <tr>
+                            <th style="width:60px;">ID</th>
+                            <th style="width:150px;">单词</th>
+                            <th>释义</th>
+                            <th style="width:140px;">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wordListBody">
+                        <tr>
+                            <td colspan="4" style="text-align:center; padding:40px; color:var(--color-fg-muted);">
+                                <div class="loading-spinner"></div> 加载中...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 分页 -->
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- ===== 添加/编辑弹窗 ===== -->
+    <div class="modal-overlay" id="wordModal">
+        <div class="modal-box">
+            <h2 id="modalTitle">添加词条</h2>
+            <input type="hidden" id="editId" value="0">
+            <div class="form-group">
+                <label>单词 <span style="color:#cf222e;">*</span></label>
+                <input type="text" id="modalWord" placeholder="请输入单词，如：apple">
+            </div>
+            <div class="form-group">
+                <label>释义 <span style="color:#cf222e;">*</span></label>
+                <textarea id="modalDefinition" placeholder="请输入释义，如：苹果"></textarea>
+            </div>
+            <div class="modal-actions">
+                <button class="btn" onclick="closeModal()">取消</button>
+                <button class="btn btn-primary" onclick="saveWord()">💾 保存</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Toast 通知 ===== -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // ============================================================
+        //  状态
+        // ============================================================
+        var currentPage = 1;
+        var currentLimit = 50;
+        var currentSearch = '';
+        var totalPages = 0;
+
+        // ============================================================
+        //  Toast 通知
+        // ============================================================
+        function showToast(message, type) {
+            var toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = 'toast ' + (type || 'info');
+            void toast.offsetWidth;
+            toast.classList.add('show');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ============================================================
+        //  检查登录状态
+        // ============================================================
+        function checkLogin() {
+            fetch('oauth.php?action=me')
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.code === 200) {
+                        document.getElementById('userInfo').textContent = '👤 ' + (data.data.display_name || '用户');
+                        document.getElementById('loginWarning').style.display = 'none';
+                        loadWords(1);
+                    } else {
+                        document.getElementById('userInfo').textContent = '未登录';
+                        document.getElementById('loginWarning').style.display = 'block';
+                        document.getElementById('wordListBody').innerHTML = 
+                            '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--color-fg-muted);">' +
+                            '请先 <a href="index.html" style="color:var(--color-accent-fg);">登录</a> 后再管理词库</td></tr>';
+                        document.getElementById('pagination').innerHTML = '';
+                    }
+                })
+                .catch(function(e) {
+                    document.getElementById('userInfo').textContent = '❌ 连接失败';
+                });
+        }
+
+        // ============================================================
+        //  加载词条列表
+        // ============================================================
+        function loadWords(page) {
+            currentPage = page || 1;
+            currentSearch = document.getElementById('searchInput').value.trim();
+            currentLimit = parseInt(document.getElementById('limitSelect').value);
+
+            var url = 'dictionary_api.php?action=list&page=' + currentPage + '&limit=' + currentLimit;
+            if (currentSearch) {
+                url += '&search=' + encodeURIComponent(currentSearch);
+            }
+
+            // 显示加载状态
+            document.getElementById('wordListBody').innerHTML = 
+                '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--color-fg-muted);">' +
+                '<div class="loading-spinner"></div> 加载中...</td></tr>';
+
+            fetch(url)
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.code === 401) {
+                        document.getElementById('loginWarning').style.display = 'block';
+                        document.getElementById('wordListBody').innerHTML = 
+                            '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--color-fg-muted);">请先登录后再管理词库</td></tr>';
+                        document.getElementById('pagination').innerHTML = '';
+                        return;
+                    }
+                    document.getElementById('loginWarning').style.display = 'none';
+
+                    if (data.code === 200) {
+                        renderWords(data.data.words);
+                        document.getElementById('totalCount').textContent = data.data.total || 0;
+                        document.getElementById('currentPageInfo').textContent = data.data.page || 1;
+                        document.getElementById('totalPagesInfo').textContent = data.data.totalPages || 0;
+                        totalPages = data.data.totalPages || 0;
+                        renderPagination(data.data.page, data.data.totalPages);
+                    } else {
+                        showToast(data.message || '加载失败', 'error');
+                    }
+                })
+                .catch(function(e) {
+                    showToast('网络错误，请重试', 'error');
+                });
+        }
+
+        // ============================================================
+        //  渲染词条列表
+        // ============================================================
+        function escapeHtml(text) {
+            if (!text) return '';
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function renderWords(words) {
+            var tbody = document.getElementById('wordListBody');
+            if (!words || words.length === 0) {
+                tbody.innerHTML = 
+                    '<tr><td colspan="4" style="text-align:center; padding:40px; color:var(--color-fg-muted);">' +
+                    '<div class="empty-state"><div class="icon">📭</div><p>暂无词条，点击 "添加词条" 或 "上传词库" 添加</p></div></td></tr>';
+                return;
+            }
+
+            var html = '';
+            words.forEach(function(item) {
+                var def = item.definition || '';
+                var displayDef = def.length > 100 ? def.substring(0, 100) + '...' : def;
+                html += '<tr>' +
+                    '<td>' + item.id + '</td>' +
+                    '<td class="word-cell">' + escapeHtml(item.word) + '</td>' +
+                    '<td class="def-cell" title="' + escapeHtml(def) + '">' + escapeHtml(displayDef) + '</td>' +
+                    '<td>' +
+                    '<div class="actions-cell">' +
+                    '<button class="btn btn-sm" onclick="openEditModal(' + item.id + ')" title="编辑">✏️</button>' +
+                    '<button class="btn btn-sm btn-danger" onclick="deleteWord(' + item.id + ', \'' + escapeHtml(item.word) + '\')" title="删除">🗑️</button>' +
+                    '</div>' +
+                    '</td>' +
+                    '</tr>';
+            });
+            tbody.innerHTML = html;
+        }
+
+        // ============================================================
+        //  分页
+        // ============================================================
+        function renderPagination(page, total) {
+            var container = document.getElementById('pagination');
+            if (total <= 1) {
+                container.innerHTML = '';
+                return;
+            }
+
+            var html = '';
+            html += '<button class="btn btn-sm" onclick="loadWords(' + (page - 1) + ')" ' + (page <= 1 ? 'disabled' : '') + '>‹</button>';
+
+            var start = Math.max(1, page - 2);
+            var end = Math.min(total, page + 2);
+            if (start > 1) {
+                html += '<button class="btn btn-sm" onclick="loadWords(1)">1</button>';
+                if (start > 2) html += '<span style="color:var(--color-fg-muted);padding:0 4px;">…</span>';
+            }
+            for (var i = start; i <= end; i++) {
+                html += '<button class="btn btn-sm ' + (i === page ? 'active' : '') + '" onclick="loadWords(' + i + ')">' + i + '</button>';
+            }
+            if (end < total) {
+                if (end < total - 1) html += '<span style="color:var(--color-fg-muted);padding:0 4px;">…</span>';
+                html += '<button class="btn btn-sm" onclick="loadWords(' + total + ')">' + total + '</button>';
+            }
+
+            html += '<button class="btn btn-sm" onclick="loadWords(' + (page + 1) + ')" ' + (page >= total ? 'disabled' : '') + '>›</button>';
+
+            container.innerHTML = html;
+        }
+
+        // ============================================================
+        //  弹窗控制
+        // ============================================================
+        function openAddModal() {
+            document.getElementById('modalTitle').textContent = '➕ 添加词条';
+            document.getElementById('editId').value = '0';
+            document.getElementById('modalWord').value = '';
+            document.getElementById('modalDefinition').value = '';
+            document.getElementById('wordModal').classList.add('active');
+            setTimeout(function() {
+                document.getElementById('modalWord').focus();
+            }, 100);
+        }
+
+        function openEditModal(id) {
+            fetch('dictionary_api.php?action=get&id=' + id)
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.code === 200) {
+                        document.getElementById('modalTitle').textContent = '✏️ 编辑词条';
+                        document.getElementById('editId').value = id;
+                        document.getElementById('modalWord').value = data.data.word;
+                        document.getElementById('modalDefinition').value = data.data.definition;
+                        document.getElementById('wordModal').classList.add('active');
+                        setTimeout(function() {
+                            document.getElementById('modalWord').focus();
+                        }, 100);
+                    } else {
+                        showToast(data.message || '获取词条失败', 'error');
+                    }
+                })
+                .catch(function(e) {
+                    showToast('网络错误，请重试', 'error');
+                });
+        }
+
+        function closeModal() {
+            document.getElementById('wordModal').classList.remove('active');
+        }
+
+        // 点击遮罩关闭弹窗
+        document.getElementById('wordModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // ============================================================
+        //  保存词条
+        // ============================================================
+        function saveWord() {
+            var id = parseInt(document.getElementById('editId').value);
+            var word = document.getElementById('modalWord').value.trim();
+            var definition = document.getElementById('modalDefinition').value.trim();
+
+            if (!word) {
+                showToast('请输入单词', 'warning');
+                document.getElementById('modalWord').focus();
+                return;
+            }
+            if (!definition) {
+                showToast('请输入释义', 'warning');
+                document.getElementById('modalDefinition').focus();
+                return;
+            }
+
+            var url = id > 0 ? 'dictionary_api.php?action=update' : 'dictionary_api.php?action=add';
+            var data = id > 0 ? { id: id, word: word, definition: definition } : { word: word, definition: definition };
+
+            fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast(data.message, 'success');
+                    closeModal();
+                    loadWords(currentPage);
+                } else {
+                    showToast(data.message || '保存失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+        }
+
+        // ============================================================
+        //  删除词条
+        // ============================================================
+        function deleteWord(id, word) {
+            if (!confirm('确认要删除词条 "' + word + '" 吗？')) return;
+
+            fetch('dictionary_api.php?action=delete', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id })
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast(data.message, 'success');
+                    loadWords(currentPage);
+                } else {
+                    showToast(data.message || '删除失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+        }
+
+        // ============================================================
+        //  清空词库
+        // ============================================================
+        function clearDictionary() {
+            if (!confirm('⚠️ 确认要清空整个词库吗？此操作不可撤销！')) return;
+            if (!confirm('再次确认：清空后将删除所有词条！')) return;
+
+            fetch('dictionary_api.php?action=clear', {
+                method: 'POST'
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast(data.message, 'success');
+                    loadWords(1);
+                } else {
+                    showToast(data.message || '清空失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+        }
+
+        // ============================================================
+        //  上传词库文件
+        // ============================================================
+        function uploadFile(input) {
+            if (!input.files || input.files.length === 0) return;
+
+            var file = input.files[0];
+            if (!file.name.endsWith('.txt')) {
+                showToast('请上传 .txt 格式的文件', 'warning');
+                input.value = '';
+                return;
+            }
+
+            var formData = new FormData();
+            formData.append('file', file);
+
+            showToast('⏳ 正在上传并导入...', 'info');
+
+            fetch('dictionary_api.php?action=upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.code === 200) {
+                    showToast(data.message, 'success');
+                    loadWords(1);
+                } else {
+                    showToast(data.message || '导入失败', 'error');
+                }
+            })
+            .catch(function(e) {
+                showToast('网络错误，请重试', 'error');
+            });
+
+            input.value = '';
+        }
+
+        // ============================================================
+        //  键盘快捷键 - ESC 关闭弹窗
+        // ============================================================
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ============================================================
+        //  初始化
+        // ============================================================
+        checkLogin();
+    </script>
+</body>
+</html>
