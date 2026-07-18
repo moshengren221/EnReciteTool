@@ -94,9 +94,9 @@ class ConfigManager {
 // ============================================================
 class Database {
     private $host = 'localhost';
-    private $dbname = 'sfydb_6309084';
-    private $username = 'sfydb_6309084';
-    private $password = 'Lyc0927.';
+    private $dbname = '你的数据库名';
+    private $username = '你的数据库账号';
+    private $password = '你的密码';
     private $conn = null;
 
     public function __construct() {
