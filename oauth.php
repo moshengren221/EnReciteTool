@@ -4,9 +4,9 @@
 // ============================================================
 //  配置 - 请修改为您的实际值
 // ============================================================
-define('CLIENT_ID', 'client_ngIngIFp');
-define('CLIENT_SECRET', 'secret_uTLFdfkyTlL3zePv9Feb3s3C');
-define('REDIRECT_URI', 'http://lycbook.xyz/oauth.php?action=callback');
+define('CLIENT_ID', '请前往7eOauth获取后填写');
+define('CLIENT_SECRET', '请前往7eOauth获取后填写');
+define('REDIRECT_URI', 'https://Yourwebsite.com/oauth.php?action=callback');
 define('AUTH_URL', 'https://auth.7e.ink/oauth/authorize');
 define('TOKEN_URL', 'https://api-auth.7e.ink/oauth/token');
 define('USERINFO_URL', 'https://api-auth.7e.ink/oauth/userinfo');
